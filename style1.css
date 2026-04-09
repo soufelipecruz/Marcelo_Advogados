@@ -336,6 +336,19 @@ text-align:center;
 background:#10293f;
 }
 
+.container-cta img{
+    width: 150px;
+    
+}
+
+.container-cta{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 /* FOOTER */
 
 .footer{
