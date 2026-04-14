@@ -229,21 +229,22 @@ gap:15px;
 margin-top:25px;
 }
 
-.demandas-lista li{
-display:flex;
-align-items:center;
-gap:12px;
-padding:16px;
-border-radius:10px;
+.demandas-lista li {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 10px;
 
-background:rgba(16,41,63,0.6);
-backdrop-filter:blur(6px);
+    background: rgba(16,41,63,0.6);
+    backdrop-filter: blur(6px);
 
-border:1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.05);
 
-transition:all 0.3s ease;
-position:relative;
-overflow:hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .demandas-lista li:hover{
@@ -451,4 +452,78 @@ white-space:nowrap;
 }
 
 
+}
+
+/* .demanda-titulo{
+display:flex;
+align-items:center;
+gap:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.demanda-conteudo{
+max-height:0;
+overflow:hidden;
+opacity:0;
+transition:all 0.4s ease;
+padding-left:28px;
+}
+
+.demanda-item.active .demanda-conteudo{
+max-height:300px;
+opacity:1;
+margin-top:10px;
+}
+
+.demanda-item.active{
+background:rgba(16,41,63,0.9);
+} */
+
+
+
+
+.demanda-titulo{
+display:flex;
+align-items:center;
+gap:10px;
+cursor:pointer;
+width:100%;
+}
+
+.demanda-conteudo{
+max-height:0;
+overflow:hidden;
+opacity:0;
+transition:all 0.4s ease;
+
+/* 🔥 ESSA LINHA RESOLVE SEU PROBLEMA */
+padding-left:0;
+}
+
+.demanda-item.active .demanda-conteudo{
+max-height:300px;
+opacity:1;
+margin-top:12px;
+}
+
+.demandas-lista li span:last-child {
+    flex: 1;
+}
+
+.topico {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.item-toggle.active .conteudo {
+    max-height: 200px;
 }
