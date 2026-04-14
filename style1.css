@@ -522,6 +522,8 @@ margin-top:12px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+
+    text-align: justify; 
 }
 
 .item-toggle.active .conteudo {
